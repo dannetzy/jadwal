@@ -1,0 +1,72 @@
+table {
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+table, tr, td, th {
+    border: 1px solid black;
+}
+
+td, th {
+    padding: 4px;
+}
+
+th {
+    padding: 12px;
+    text-align: left;
+    background-color: #04aa6d;
+    color: white;
+}
+
+tbody tr {
+    &:nth-child(even) { background-color: lightgreen; }
+    &:nth-child(odd) { background-color: lightblue; }
+}
+
+.jadwal {
+    margin-bottom: 16px;
+}
+
+.jadwal :is(th, td) {
+    &:nth-child(1) { width: 20px; }  /* Nomor */
+    &:nth-child(2) { width: 150px; } /* Mapel */
+    &:nth-child(3) { width: 80px; }  /* Jam */
+    &:nth-child(4) { width: 80px; } /* Guru */
+}
+
+:is(th, td):active {
+    background-color: crimson !important;
+    color: white;
+}
+
+caption {
+    color: #04aa6d;
+    font-family: 'Cascadia Code', monospace;
+    font-size: large;
+    font-weight: bold;
+    padding: 8px;
+    &:hover {
+        color: crimson;
+    }
+}
+
+h1, h2 {
+    font-family: 'Cascadia Code', monospace;
+    color: #04aa6d;
+    &:hover {
+        color: crimson;
+    }
+}
+
+ol {
+    font-family: 'Segoe UI', sans-serif;
+    color: darkslategray;
+}
+li {
+    padding: 2px;   
+}
+
+p {
+    font-family: Arial;
+    color: darkslategray;
+}
