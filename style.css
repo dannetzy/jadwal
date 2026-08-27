@@ -1,14 +1,11 @@
 :root {
-    --theme: #69176b;
+    --theme: darkmagenta;
     --text: #241525;
-    --active: #E6B84A;
-    --table-even: #B76DB9;
-    --table-odd: #D8A7DA;
+    --active: crimson;
+    --table-even: aliceblue;
+    --table-odd: plum;
 }
 
-hah {
-    color: mediumpurple;
-}
 table {
     border-collapse: collapse;
     font-family: 'Segoe UI', sans-serif;
