@@ -1,6 +1,5 @@
 :root {
     --theme: darkmagenta;
-    --text: #241525;
     --active: crimson;
     --table-even: aliceblue;
     --table-odd: plum;
@@ -19,32 +18,29 @@ td, th {
     padding: 4px;
 }
 
-th {
-    padding: 12px;
-    text-align: left;
-    background-color: var(--theme);
-    color: white;
-}
-
-tbody tr {
-    &:nth-child(even) { background-color: var(--table-even); }
-    &:nth-child(odd) { background-color: var(--table-odd); }
-}
-
-.jadwal {
+.jadwal-table {
     margin-bottom: 16px;
-}
 
-.jadwal :is(th, td) {
-    &:nth-child(1) { width: 20px; }  /* Nomor */
-    &:nth-child(2) { width: 150px; } /* Mapel */
-    &:nth-child(3) { width: 80px; }  /* Jam */
-    &:nth-child(4) { width: 80px; }  /* Guru */
-}
+    :is(th, td) {
+        &:nth-child(1) { width: 20px; }  /* Nomor */
+        &:nth-child(2) { width: 150px; } /* Mapel */
+        &:nth-child(3) { width: 80px; }  /* Jam */
+        &:nth-child(4) { width: 80px; }  /* Guru */
 
-:is(th, td):active {
-    background-color: var(--active) !important;
-    color: white;
+        &:active {
+            background-color: var(--active) !important;
+            color: white;
+        }
+    }
+
+    tr:nth-child(even) { background-color: var(--table-even); }
+    tr:nth-child(odd) { background-color: var(--table-odd); }
+    th {
+        padding: 12px;
+        text-align: left;
+        background-color: var(--theme);
+        color: white;
+    }
 }
 
 caption {
@@ -77,4 +73,51 @@ li {
 p {
     font-family: Arial;
     color: var(--text);
+}
+
+.buttons {
+    margin-bottom: 16px;
+    button {
+        width: 100px;
+        height: 40px;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+
+        &.active {
+            background-color: var(--theme);
+            color: white;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.jadwal-lab {
+    .nomor {
+        width: 50px;
+    }
+    .guru {
+        width: 200px;
+    }
+    .hari {
+        width: 200px;
+    }
+    .ruang, .jam {
+        width: 100px;
+    }
+    .lab1 {
+        background-color: green;
+    }
+    .lab2 {
+        background-color: yellow;
+    }
+    tbody td {
+        height: 22px;
+    }
+    .td-nomor {
+        text-align: center;
+    }
 }
